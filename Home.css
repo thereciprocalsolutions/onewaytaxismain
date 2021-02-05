@@ -12,10 +12,10 @@
 }
 .float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  left: 10px;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 10px;
   background-color: #25d366;
   color: #000000;
   border-radius: 50px;
@@ -31,9 +31,9 @@
 
 .float1 {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  bottom: 90px;
   right: 10px;
   background-color: #4498ff;
   color: #000000;
