@@ -764,14 +764,15 @@ one way taxi hosur
 								var strText3 = document.getElementById("drop").value;
 								var strText4 = document.getElementById("date").value;
 								var strText5 = document.getElementById("time").value;
+								var y = document.getElementById("ve");
 								var result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 + '%0APickup Location: ' + strText2 + '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ';
 								//document.getElementById('spanResult').textContent = result;
 								//console.log(strText6);
 								var finalMsg = encodeURI(result);
 								document.getElementById("bookingForm").addEventListener("submit", (e) => {
 									e.preventDefault();
-									//if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "" || y.style.display === "none") {
-									if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "") {
+									if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "" || y.style.display === "none") {
+									//if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "") {
 										console.log('error');
 									} else {
 										const request = new XMLHttpRequest();
@@ -780,10 +781,10 @@ one way taxi hosur
 										request.open("post", url);
 
 										request.send();
-										/* var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=<--call for more details%0AYour Booking Request Processing "+result+"%0AThank For Contacting TRS&language=english&route=p&numbers="+strText1);
+										var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=<--call for more details%0AYour Booking Request Processing "+result+"%0AThank For Contacting TRS&language=english&route=p&numbers="+strText1);
 										      if(wnd){
 											      setTimeout(function () { wnd.close();}, 1500);
-										      }*/
+										      }
 										window.open('#', '_self');
 									}
 
