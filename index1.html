@@ -709,7 +709,7 @@ one way taxi hosur
 										<div id="myDIV">
 										<button onclick="sent()">sent</button>
 										<br>
-										<input type="text" placeholder="OTP" id="b">
+										<input type="text" placeholder="OTP" id="b" required="">
 										<button onclick="view()">verify</button>
 										</div>
 
@@ -770,6 +770,7 @@ one way taxi hosur
 								var finalMsg = encodeURI(result);
 								document.getElementById("bookingForm").addEventListener("submit", (e) => {
 									e.preventDefault();
+									//if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "" || y.style.display === "none") {
 									if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText5 == "" || strText6 == "" || strText7 == "") {
 										console.log('error');
 									} else {
@@ -779,6 +780,10 @@ one way taxi hosur
 										request.open("post", url);
 
 										request.send();
+										/* var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=<--call for more details%0AYour Booking Request Processing "+result+"%0AThank For Contacting TRS&language=english&route=p&numbers="+strText1);
+										      if(wnd){
+											      setTimeout(function () { wnd.close();}, 1500);
+										      }*/
 										window.open('#', '_self');
 									}
 
