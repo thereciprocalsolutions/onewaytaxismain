@@ -2829,10 +2829,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   var b;
   var c;
   var p;
+	  var y = document.getElementById("ve");
 function sent() {
   p=document.getElementById("phone").value;
   c = Math.floor((Math.random()*10000)+1);
-  if(p!="")
+  if(p!="" && y.style.display === "none")
   {
   alert("OTP Sent");
  var otp =window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message= %0A..%0A Thanking For Registering%0AYour OTP : "+c+"%0A For CAB Booking "+"&language=english&route=p&numbers="+p);
